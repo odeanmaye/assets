@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stats</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    
+    <!-- Include the compiled Ratchet CSS -->
+  	<link rel="stylesheet" href="./ratchet/css/ratchet-theme-android.min.css">
+  	<link rel="stylesheet" href="./css/override.css">
+  	<script src="./js/Cycle.js"></script>
+  	<script>
+  	  var cycle = new Cycle( statsController );
+  	  var currentMonth = cycle.getMonth();
+  	  var currentYear = cycle.getYear();
+    </script>
+  </head>
+  <body>
+    <div id="bgImage">
+    <div id="wrapper">
+    <div align="center">
+      <div style="color:white">Your Timescore:</div>
+      <h1 style="font-size:1500%;color:white;opacity:0.5;">50</h1>
+      <div style="color:white">High Score:</div> <span class="badge badge-positive">70</span>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button class="btn btn-positive" onclick="cycle.viewCycle();">Play</button>
+      <br>
+      <br>
+      <br>
+    </div>
+    </div>
+    </div>
+    <!-- Include the compiled Ratchet JS -->
+    <script src="./ratchet/js/ratchet.min.js"></script>
+  </body>
+</html>

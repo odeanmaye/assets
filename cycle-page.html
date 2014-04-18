@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cycle</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    
+    <!-- Include the compiled Ratchet CSS -->
+  	<link rel="stylesheet" href="./ratchet/css/ratchet-theme-android.min.css">
+  	<link rel="stylesheet" href="./css/override.css">
+  	<script src="./js/Cycle.js"></script>
+    <script>
+  	  var cycle = new Cycle( cycleController );
+  	  var currentMonth = cycle.getMonth();
+  	  var currentYear = cycle.getYear();
+    </script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <div align="center">
+    <table>
+      <tr>
+	    <td align="left" style="vertical-align:middle;padding-right:15px;">
+	      <span class="glyphicon glyphicon-circle-arrow-left"></span>
+	    </td>
+	    <td>
+	      <div align="center">
+	      	<h1><script>document.write(currentMonth);</script></h1>
+	      	<b><script>document.write(currentYear);</script></b>
+	      </div>
+	    </td>
+	    <td align="right" style="vertical-align:middle;padding-left:15px;">
+	      <span class="glyphicon glyphicon-circle-arrow-right"></span>
+	    </td>
+	  </tr>
+	</table> 
+    </div>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="cycle.addIncome('123457');">
+      	<b>Income</b>
+      	<span class="glyphicon glyphicon-plus-sign pull-right"></span>
+      </div>
+      <table class="table">
+        <tr>
+  		  <td></td>
+  		  <td align="center"><b>Dollars</b></td> 
+  		  <td align="center"><b>Hours</b></td>
+  		  <td></td>
+		</tr>
+		<tr>
+		  <td>Goal</td>
+		  <td align="center">8000.00</td>
+		  <td align="center">200</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+        <tr>
+		  <td>Paycheck</td>
+		  <td align="center">2000.00</td>
+		  <td align="center">80</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tr>
+		  <td>Passive</td>
+		  <td align="center">105.36</td>
+		  <td align="center">0</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tr>
+		  <td>Side Work</td>
+		  <td align="center">560.00</td>
+		  <td align="center">7.5</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tfoot>
+          <tr>
+            <td></td>
+            <td align="center"><b>2665.36</b></td>
+            <td align="center"><b>87.5</b></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-positive btn-outlined"><span class="glyphicon glyphicon-time"></span></button>
+      <button type="button" class="btn btn-positive btn-outlined"><span class="glyphicon glyphicon-usd"></span></button>
+    </div>
+    <br>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="cycle.addBill('123457');">
+      	<b>Bills</b>
+      	<span class="glyphicon glyphicon-plus-sign pull-right"></span>
+      </div>
+      <table class="table">
+        <tr>
+  		  <td></td>
+  		  <td align="center"><b>Budget</b></td> 
+  		  <td align="center"><b>Actual</b></td>
+  		  <td></td>
+		</tr>
+        <tr>
+		  <td>Mortgage</td>
+		  <td align="center">1360.00</td>
+		  <td align="center">1354.85</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tr>
+		  <td>Cellphone</td>
+		  <td align="center">140.00</td>
+		  <td align="center">135.90</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tr>
+		  <td>Car Payment</td>
+		  <td align="center">410.00</td>
+		  <td align="center">409.20</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tr>
+		  <td>Internet</td>
+		  <td align="center">75.95</td>
+		  <td align="center">00.00</td>
+		  <td align="center"><span class="glyphicon glyphicon-chevron-right"></span></td>
+		</tr>
+		<tfoot>
+          <tr>
+            <td></td>
+            <td align="center"><b>1985.95</b></td>
+            <td align="center"><b>1899.95</b></td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      </div>
+	</div>
+    <!-- Include the compiled Ratchet JS -->
+    <script src="./ratchet/js/ratchet.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#wrapper
+{
+  padding:5px;
+}
+
+#bgImage
+{
+      background: url(../img/Big_Ben_.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}

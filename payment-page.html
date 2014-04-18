@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Payment</title>
+
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    
+    <!-- Include the compiled Ratchet CSS -->
+  	<link rel="stylesheet" href="./ratchet/css/ratchet-theme-android.min.css">
+  	<link rel="stylesheet" href="./css/override.css">
+    <script src="./js/Cycle.js"></script>
+    <script>
+  	  var cycle = new Cycle( paymentController );
+    </script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div align="center">
+      <h3>Add a Payment</h3>
+      <h4>Mortgage</h4>
+      </div>
+      <form>
+  		<div class="input-group" style="width:100%">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" placeholder="205.23">
+        </div>
+  		<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  		<input style="width:100%; margin-bottom:5px" size="16" type="text" value="12-02-2012">
+  		<span class="add-on"><i class="icon-th"></i></span>
+		</div>
+		<textarea style="width:100%" rows="5" placeholder="Notes..."></textarea>
+  		<button class="btn btn-positive btn-block">Save</button>
+  		<button class="btn btn-negative btn-block">Cancel</button>
+	  </form>
+	  <br>
+	  <ul class="list-group">
+  		<li class="list-group-item">02/14/14 : $53.21</li>
+  		<li class="list-group-item">02/19/14 : $25.16</li>
+	  </ul>
+	</div>
+    <!-- Include the compiled Ratchet JS -->
+    <script src="./ratchet/js/ratchet.min.js"></script>
+  </body>
+</html>
