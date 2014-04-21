@@ -19,7 +19,7 @@
   	<link rel="stylesheet" href="./css/override.css">
     <script src="./js/Cycle.js"></script>
     <script>
-  	  var cycle = new Cycle( billController );
+  	  //var cycle = new Cycle( billController );
     </script>
   </head>
   <body>
@@ -28,14 +28,26 @@
       <h3>Add a Bill</h3>
       </div>
       <form>
-        <input style="width:100%; margin-bottom:5px" type="text" placeholder="Bill Name : Mortgage etc...">
-  		<input style="width:100%; margin-bottom:5px" type="text" placeholder="Budget: $200.00 etc...">
-  		<textarea style="width:100%" rows="5" placeholder="Notes:"></textarea>
-  		<button class="btn btn-positive btn-block">Save</button>
-  		<button class="btn btn-negative btn-block">Cancel</button>
+        <input id="name" style="width:100%; margin-bottom:5px" type="text" placeholder="Bill Name : Mortgage etc...">
+  		<input id="budget" style="width:100%; margin-bottom:5px" type="text" placeholder="Budget: $200.00 etc...">
+  		<textarea id="notes" style="width:100%" rows="5" placeholder="Notes:"></textarea>
+  		<button class="btn btn-positive btn-block" onclick="validate();">Save</button>
+  		<button class="btn btn-negative btn-block" >Cancel</button>
 	  </form>
 	</div>
     <!-- Include the compiled Ratchet JS -->
     <script src="./ratchet/js/ratchet.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+    	function validate()
+    	{
+    		console.log($("#name").val());
+    	}
+    	
+    	function submit()
+    	{
+    		
+    	}
+    </script>
   </body>
 </html>

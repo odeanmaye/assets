@@ -46,6 +46,11 @@ function Cycle( controller )
 		this.controller.viewCycle();
 	}
 	
+	this.viewByCycleId = function()
+	{
+		this.viewCycle( cycleId );
+	}
+	
 	this.addIncome = function( cycleId )
 	{
 		this.controller.addIncome( cycleId );
@@ -54,6 +59,11 @@ function Cycle( controller )
 	this.addBill = function( cycleId )
 	{
 		this.controller.addBill( cycleId );
+	}
+	
+	this.addGoal = function()
+	{
+		this.controller.addGoal( cycleId );
 	}
 	
 	this.editIncome = function( incomeId )
